@@ -208,6 +208,7 @@ public class TouchInputHandler : MonoBehaviour {
 			} else {
 				switchDelay = 0;
 			} 
+			print ("delay: " + switchDelay);
 			// for the mouse inputs
 			if (usingMouse) {
 				// if the left mouse button is clicking on our object
@@ -495,7 +496,7 @@ public class TouchInputHandler : MonoBehaviour {
 
 							// we add pieces that were selected the step before but are no longer selected, ie they have been locked in
 							if (savednotselected && savedPiece[q] != null) {
-								Debug.Log("Savednotselected call to addToRocketPieces()");
+								//Debug.Log("Savednotselected call to addToRocketPieces()");
 								addToRocketPieces (savedPiece [q]); 
 								if (savedPiece[q] != null)
 								{
@@ -857,12 +858,12 @@ public class TouchInputHandler : MonoBehaviour {
 
 
 
-			Debug.Log("Calling 'addToRocketPieces' on: " + selectedBodyPiece.name);
-			Debug.Log("See me: " + script.seeMe.ToString());
-			Debug.Log("Current position: " + selectedBodyPiece.transform.position.ToString());
-			Debug.Log("Lock position: " + script.lockPosition.ToString());
-			Debug.Log ("Initial Lock position: " + script.initialLockPosition.ToString());
-			Debug.Log("Script added: " + script.added.ToString());
+			//Debug.Log("Calling 'addToRocketPieces' on: " + selectedBodyPiece.name);
+			//Debug.Log("See me: " + script.seeMe.ToString());
+			//Debug.Log("Current position: " + selectedBodyPiece.transform.position.ToString());
+			//Debug.Log("Lock position: " + script.lockPosition.ToString());
+			//Debug.Log ("Initial Lock position: " + script.initialLockPosition.ToString());
+			//Debug.Log("Script added: " + script.added.ToString());
 			
 			// script.added indicates whether it's already been added to the rocketPieces list
 			if (script.seeMe == true && selectedBodyPiece.transform.position == script.lockPosition &&

@@ -87,8 +87,8 @@ public class GameManager : MonoBehaviour {
 		}
 
 		// show the question mark
-		GameObject questionMark = GameObject.Find("QuestionArea");
-		questionMark.GetComponent<SpriteRenderer> ().enabled = true;
+		//GameObject questionMark = GameObject.Find("QuestionArea");
+		//questionMark.GetComponent<SpriteRenderer> ().enabled = true;
 
 		GameObject jet = GameObject.Find ("RocketSprites/SelectedOutlines/BoosterSelectedOutlines/engine_selected_outline 1/Jet");
 		jet.GetComponent<ParticleSystem>().enableEmission = false;
