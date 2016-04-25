@@ -1,0 +1,275 @@
+Initialize engine version: 5.1.1f1 (2046fc06d4d8)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     896 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\CookComputing.XmlRpcV2.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\CookComputing.XmlRpcV2.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\ThalamusUnityClientMessages.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\ThalamusUnityClientMessages.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\TouchScript.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\TouchScript.dll into Unity Child Domain
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\TouchScript.Windows.dll (this message is harmless)
+Loading C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\TouchScript.Windows.dll into Unity Child Domain
+- Completed reload, in  0.299 seconds
+desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\System.dll (this message is harmless)
+Thalamus endpoint set to http://localhost:7000
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Attempt to start service on port '7001'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Thalamus endpoint set to http://localhost:7000
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\System.Configuration.dll (this message is harmless)
+Attempt to start service on port '7001'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Platform assembly: C:\Users\alexr_000\Documents\GitHub\rocketgame_v01\build_a_rocket_v01\run_Data\Managed\System.Xml.dll (this message is harmless)
+No camera layers, adding CameraLayer for the main camera. (this message is harmless)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+XMLRPC Listening on http://*:7001/
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Port unavaliable.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Attempt to start service on port '7002'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+XMLRPC Listening on http://*:7002/
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+InvalidOperationException: Collection was modified; enumeration operation may not execute.
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].VerifyState () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1+Enumerator[UnityEngine.GameObject].MoveNext () [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.checkTrash (UnityEngine.GameObject selected) [0x00000] in <filename unknown>:0 
+  at TouchInputHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
