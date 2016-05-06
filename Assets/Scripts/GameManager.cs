@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour {
 					GameObject p = GameObject.Find ("Canvas/Power");
 					p.transform.position = new Vector3 (-1000, -1000, 0);
 
-
+					/*
 					foreach (GameObject piece in GameObject.Find("GameManager").GetComponent<TouchInputHandler>().rocketPieces) {
 						if (piece.name.Contains ("fin_Engine") || piece.name.Contains ("fin_Propeller")) {
 							// if it's on the left side
@@ -236,6 +236,9 @@ public class GameManager : MonoBehaviour {
 					
 					// start the liftoff sound
 					audioSource1.Play ();
+
+
+					*/
 				}
 
 				var a = black.GetComponent<SpriteRenderer> ().color;

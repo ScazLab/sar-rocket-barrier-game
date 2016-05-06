@@ -5,6 +5,7 @@ public class ObjectInfo : MonoBehaviour {
 	public Vector3 lockPosition;
 	public Vector3 initialLockPosition;
 	public bool firstTouch = false;
+	public Vector3 positionBias;
 	private float jumpSize;
 
 	// indicating whether it is a leftover piece
@@ -92,7 +93,11 @@ public class ObjectInfo : MonoBehaviour {
 		}
 		lockPosition = newLock;
 		if (lockPosition.x == initialLockPosition.x) {
-			initialLockPosition = lockPosition;
+			if (positionBias == null) {
+				initialLockPosition = lockPosition;
+			} else {
+				initialLockPosition = lockPosition + positionBias;
+			}
 		} //fixes jumbling error
 
 		seeMe = true;

@@ -20,11 +20,18 @@ public class SavedPieceInfo {
 public class SavedVariables : MonoBehaviour {
 
 	public List<int> distanceVals = new List<int> () {-1, -1, -1, -1, -1, -1, -1};
-
+	public int playerState;
 	public int trialNumber = 1;
 
 	// public bool gameStarted = true; // DEMO CHANGE
 	public bool gameStarted = false;
+
+	public int saveCone = 2;
+	public int saveCone2 = 2;
+	public int[] saveFin;
+	for (int i = 0; i < 4; i++) {
+		saveFin[i] = 2;
+	}
 
 	public List<SavedPieceInfo> previousTrialRocketPieces = new List<SavedPieceInfo> ();
 

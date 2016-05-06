@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 using System.Collections.Generic;
@@ -99,6 +99,8 @@ public class TouchInputHandler : MonoBehaviour {
 		// set the state to nothingSelected
 		currentState = nothingSelected;
 
+		var levelname = "Level1";
+
 		//Application.LoadLevel ("MainGameplay");
 
 		// get the animators
@@ -185,6 +187,59 @@ public class TouchInputHandler : MonoBehaviour {
 			// add it to rocketPieces
 			rocketPieces.Add(newObject);
 		}
+
+		//display objects if comparing the two trials
+		levelname = Application.loadedLevelName;
+		GameObject n;
+		GameObject n2;
+		if (levelname == "Level1-3") {
+
+			//create cones
+			Vector3 conePos = new Vector3 (46.2f, 28.6f, 0);
+			Vector3 conePos2 = new Vector3 (-46.2f, 28.6f, 0);
+			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone == 0) {
+				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos);
+				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
+			} else {
+				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), conePos);
+				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
+
+			}
+			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone2 == 0) {
+				n2 = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos2);
+				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
+			} else {
+				n2 = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), conePos2);
+				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
+				
+			}
+			n.GetComponent<SpriteRenderer> ().enabled = true;
+			n2.GetComponent<SpriteRenderer> ().enabled = true;
+
+
+			//create fins
+
+			GameObject[] fins;
+			Vector3[] finPos;
+			finPos[0] = new Vector3 (100, 28.6f, 0);
+			finPos[1] = new Vector3 (-100, 28.6f, 0);
+			finPos[2] = new Vector3 (100, 28.6f, 0);
+			finPos[3] = new Vector3 (-100, 28.6f, 0);
+
+			for (int i=0; i<4; i++) {
+				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveFin[i] == 0) {
+					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), finPos[i]);
+					fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
+				} else {
+					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), finPos[i]);
+					fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
+					
+				}
+				fins[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
+
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -208,7 +263,7 @@ public class TouchInputHandler : MonoBehaviour {
 			} else {
 				switchDelay = 0;
 			} 
-			print ("delay: " + switchDelay);
+			//print ("delay: " + switchDelay);
 			// for the mouse inputs
 			if (usingMouse) {
 				// if the left mouse button is clicking on our object
@@ -889,14 +944,62 @@ public class TouchInputHandler : MonoBehaviour {
 
 
 				GameObject newObject = null;
-
+				String levelname = Application.loadedLevelName;
 
 				if (currentState == coneSelected) {
+					//save the value of the attached cone
+					if (levelname == "Level1") {
+						if (pos < 6) {
+							GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone = 0;
+						} else {
+							GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone = 1;
+						}
+					} else if (levelname == "Level1-2") {
+						if (pos < 6) {
+							GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone2 = 0;
+						} else {
+							GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone2 = 1;
+						}
+					}
+
+
 					newObject = GameObjectUtil.Instantiate(conePieces[pos], lockP);
 					conePieceList.Add (newObject);
 					newObject.GetComponent<SpriteRenderer>().sprite = selectedBodyPiece.GetComponent<SpriteRenderer>().sprite;
 				} else
 				if (currentState == finSelected) {
+
+					if (selectedBodyPiece.transform.position.x < 0) {
+						if (levelname == "Level1") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[0] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[0] = 1;
+							}
+						} else if (levelname == "Level1-2") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[2] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone[2] = 1;
+							}
+						}
+					} else {
+						if (levelname == "Level1") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[1] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[1] = 1;
+							}
+						} else if (levelname == "Level1-2") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[3] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[3] = 1;
+							}
+						}
+					}
+
+
 					newObject = GameObjectUtil.Instantiate(finPieces[pos], lockP);
 					finPieceList.Add (newObject);
 					newObject.GetComponent<SpriteRenderer>().sprite = selectedBodyPiece.GetComponent<SpriteRenderer>().sprite;
