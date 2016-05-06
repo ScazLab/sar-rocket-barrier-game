@@ -26,16 +26,27 @@ public class SavedVariables : MonoBehaviour {
 	// public bool gameStarted = true; // DEMO CHANGE
 	public bool gameStarted = false;
 
-	public int saveCone = 2;
-	public int saveCone2 = 2;
+	public int saveCone;
+	public int saveCone2;
 	public int[] saveFin;
-	for (int i = 0; i < 4; i++) {
-		saveFin[i] = 2;
-	}
+	public int[] saveBoost;
+	public int[] saveBody;
 
 	public List<SavedPieceInfo> previousTrialRocketPieces = new List<SavedPieceInfo> ();
 
 	void Awake() {
+		if (Application.loadedLevelName == "Level1") {
+			saveCone = saveCone2 = 2;
+
+			saveFin = new int[4];
+			saveFin [0] = saveFin [1] = saveFin [2] = saveFin [3] = 2;
+
+			saveBoost = new int[4];
+			saveBoost[0] = saveBoost[1] = saveBoost[2] = saveBoost[3] = 2;
+
+			saveBody = new int[8];
+			saveBody[0] = saveBody[1] = saveBody[2] = saveBody[3] = saveBody[4] = saveBody[5] = saveBody[6] = saveBody[7] = 2;
+		}
 		DontDestroyOnLoad (this);
 	}
 }

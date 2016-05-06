@@ -190,53 +190,133 @@ public class TouchInputHandler : MonoBehaviour {
 
 		//display objects if comparing the two trials
 		levelname = Application.loadedLevelName;
-		GameObject n;
-		GameObject n2;
+		GameObject n = null;
+		GameObject n2 = null;
 		if (levelname == "Level1-3") {
 
 			//create cones
-			Vector3 conePos = new Vector3 (46.2f, 28.6f, 0);
-			Vector3 conePos2 = new Vector3 (-46.2f, 28.6f, 0);
+			Vector3 conePos = new Vector3 (-46.2f, 28.6f, 0);
+			Vector3 conePos2 = new Vector3 (46.2f, 28.6f, 0);
 			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone == 0) {
 				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos);
-				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
-			} else {
+				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<ObjectInfo> ().rocketSprite;
+			} else if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone == 1){
 				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), conePos);
-				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
+				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<ObjectInfo> ().rocketSprite;
 
 			}
 			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone2 == 0) {
 				n2 = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos2);
-				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
-			} else {
+				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<ObjectInfo> ().rocketSprite;
+			} else if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone2 == 1){
 				n2 = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), conePos2);
-				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
+				n2.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<ObjectInfo> ().rocketSprite;
 				
 			}
-			n.GetComponent<SpriteRenderer> ().enabled = true;
-			n2.GetComponent<SpriteRenderer> ().enabled = true;
 
+			if (n!= null ) {
+				n.GetComponent<SpriteRenderer> ().enabled = true;
+
+			}
+			if (n2 != null) {
+				n2.GetComponent<SpriteRenderer> ().enabled = true;
+			}
 
 			//create fins
 
 			GameObject[] fins;
+			fins = new GameObject[4];
 			Vector3[] finPos;
-			finPos[0] = new Vector3 (100, 28.6f, 0);
-			finPos[1] = new Vector3 (-100, 28.6f, 0);
-			finPos[2] = new Vector3 (100, 28.6f, 0);
-			finPos[3] = new Vector3 (-100, 28.6f, 0);
+			finPos = new Vector3[4];
+
+			finPos[0] = new Vector3 (-50, 20, 0);
+			finPos[1] = new Vector3 (-30, 20, 0);
+			finPos[2] = new Vector3 (30, 20, 0);
+			finPos[3] = new Vector3 (50, 20, 0);
 
 			for (int i=0; i<4; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveFin[i] == 0) {
-					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), finPos[i]);
-					fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<SpriteRenderer> ().sprite;
+					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("fin_Engine"), finPos[i]);
+					if (i % 2 == 0) {
+						fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("fin_Engine").GetComponent<ObjectInfo> ().rocketSprite;
+					} else {
+						fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("fin_Engine").GetComponent<ObjectInfo> ().finSpriteRight;
+					}
+				} else if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveFin[i] == 1){
+					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("fin_Shark"), finPos[i]);
+					if (i % 2 == 0) {
+						fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("fin_Shark").GetComponent<ObjectInfo> ().rocketSprite;
+					} else {
+						fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("fin_Shark").GetComponent<ObjectInfo> ().finSpriteRight;
+
+					}
 				} else {
-					fins[i] = GameObjectUtil.Instantiate (GameObject.Find ("cone_Flat"), finPos[i]);
-					fins[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Flat").GetComponent<SpriteRenderer> ().sprite;
-					
+					Debug.Log ("nothing on iteration " + i);
 				}
-				fins[i].GetComponent<SpriteRenderer>().enabled = true;
+				if (fins[i] != null) {
+					fins[i].GetComponent<SpriteRenderer>().enabled = true;
+				}
 			}
+
+			//create boosters
+
+			GameObject[] boosts;
+			boosts = new GameObject[4];
+			Vector3[] boostPos;
+			boostPos = new Vector3[4];
+			
+			boostPos[0] = new Vector3 (-50, 0, 0);
+			boostPos[1] = new Vector3 (-30, 0, 0);
+			boostPos[2] = new Vector3 (30, 0, 0);
+			boostPos[3] = new Vector3 (50, 0, 0);
+			
+			for (int i=0; i<4; i++) {
+				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBoost[i] == 0) {
+					boosts[i] = GameObjectUtil.Instantiate (GameObject.Find ("engine_Fin_Blue"), boostPos[i]);
+					boosts[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("engine_Fin_Blue").GetComponent<SpriteRenderer> ().sprite;
+				} else if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBoost[i] == 1){
+					boosts[i] = GameObjectUtil.Instantiate (GameObject.Find ("engine_Balloon"), boostPos[i]);
+					boosts[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("engine_Balloon").GetComponent<SpriteRenderer> ().sprite;
+					
+				} else {
+					Debug.Log ("nothing on iteration " + i);
+				}
+				if (boosts[i] != null) {
+					boosts[i].GetComponent<SpriteRenderer>().enabled = true;
+				}
+			}
+
+			//create body
+			
+			GameObject[] bodies;
+			bodies = new GameObject[8];
+			Vector3[] bodyPos;
+			bodyPos = new Vector3[8];
+			
+			bodyPos[0] = new Vector3 (-51.8f, 13, 0);
+			bodyPos[1] = new Vector3 (-37.7f, 13, 0);
+			bodyPos[2] = new Vector3 (37.7f, 13, 0);
+			bodyPos[3] = new Vector3 (51.8f, 13, 0);
+			bodyPos[4] = new Vector3 (-51.8f, 0, 0);
+			bodyPos[5] = new Vector3 (-37.7f, 0, 0);
+			bodyPos[6] = new Vector3 (37.7f, 0, 0);
+			bodyPos[7] = new Vector3 (51.8f, 0, 0);
+			
+			for (int i=0; i<8; i++) {
+				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBody[i] == 0) {
+					bodies[i] = GameObjectUtil.Instantiate (GameObject.Find ("body_Chrome"), bodyPos[i]);
+					bodies[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("body_Chrome").GetComponent<SpriteRenderer> ().sprite;
+				} else if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBody[i] == 1){
+					bodies[i] = GameObjectUtil.Instantiate (GameObject.Find ("body_Hamster"), bodyPos[i]);
+					bodies[i].GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("body_Hamster").GetComponent<SpriteRenderer> ().sprite;
+				} else {
+					Debug.Log ("nothing on iteration " + i);
+				}
+				if (bodies[i] != null) {
+					bodies[i].GetComponent<SpriteRenderer>().enabled = true;
+				}
+			}
+
 
 		}
 
@@ -980,7 +1060,7 @@ public class TouchInputHandler : MonoBehaviour {
 							if (pos < 6) {
 								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[2] = 0;
 							} else {
-								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveCone[2] = 1;
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveFin[2] = 1;
 							}
 						}
 					} else {
@@ -1005,11 +1085,108 @@ public class TouchInputHandler : MonoBehaviour {
 					newObject.GetComponent<SpriteRenderer>().sprite = selectedBodyPiece.GetComponent<SpriteRenderer>().sprite;
 				} else 
 				if (currentState == bodySelected) {
+
+					if (selectedBodyPiece.transform.position.y > 7) {
+						if (selectedBodyPiece.transform.position.x < 0) {
+							if (levelname == "Level1") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[0] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[0] = 1;
+								}
+							} else if (levelname == "Level1-2") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[2] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[2] = 1;
+								}
+							}
+						} else {
+							if (levelname == "Level1") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[1] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[1] = 1;
+								}
+							} else if (levelname == "Level1-2") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[3] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[3] = 1;
+								}
+							}
+						}
+					} else {
+						if (selectedBodyPiece.transform.position.x < 0) {
+							if (levelname == "Level1") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[4] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[4] = 1;
+								}
+							} else if (levelname == "Level1-2") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[6] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[6] = 1;
+								}
+							}
+						} else {
+							if (levelname == "Level1") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[5] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[5] = 1;
+								}
+							} else if (levelname == "Level1-2") {
+								if (pos < 6) {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[7] = 0;
+								} else {
+									GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBody[7] = 1;
+								}
+							}
+						}
+					}
+
+
+
 					newObject = GameObjectUtil.Instantiate(bodyPieces[pos], lockP);
 					bodyPieceList.Add (newObject);
 					newObject.GetComponent<SpriteRenderer>().sprite = selectedBodyPiece.GetComponent<SpriteRenderer>().sprite;
 				} else
 				if (currentState == boosterSelected) {
+
+					if (selectedBodyPiece.transform.position.x < 0) {
+						if (levelname == "Level1") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[0] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[0] = 1;
+							}
+						} else if (levelname == "Level1-2") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[2] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[2] = 1;
+							}
+						}
+					} else {
+						if (levelname == "Level1") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[1] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[1] = 1;
+							}
+						} else if (levelname == "Level1-2") {
+							if (pos < 6) {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[3] = 0;
+							} else {
+								GameObject.Find("SavedVariables").GetComponent<SavedVariables>().saveBoost[3] = 1;
+							}
+						}
+					}
+
+
 					newObject = GameObjectUtil.Instantiate(boosterPieces[pos], lockP);
 					boosterPieceList.Add (newObject);
 					newObject.GetComponent<SpriteRenderer>().sprite = selectedBodyPiece.GetComponent<SpriteRenderer>().sprite;
