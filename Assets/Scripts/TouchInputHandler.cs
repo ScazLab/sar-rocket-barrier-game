@@ -195,8 +195,8 @@ public class TouchInputHandler : MonoBehaviour {
 		if (levelname == "Level1-3") {
 
 			//create cones
-			Vector3 conePos = new Vector3 (-46.2f, 28.6f, 0);
-			Vector3 conePos2 = new Vector3 (46.2f, 28.6f, 0);
+			Vector3 conePos = new Vector3 (-46.2f, 23.6f, 0);
+			Vector3 conePos2 = new Vector3 (46.2f, 23.6f, 0);
 			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone == 0) {
 				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos);
 				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<ObjectInfo> ().rocketSprite;
@@ -229,10 +229,10 @@ public class TouchInputHandler : MonoBehaviour {
 			Vector3[] finPos;
 			finPos = new Vector3[4];
 
-			finPos[0] = new Vector3 (-50, 20, 0);
-			finPos[1] = new Vector3 (-30, 20, 0);
-			finPos[2] = new Vector3 (30, 20, 0);
-			finPos[3] = new Vector3 (50, 20, 0);
+			finPos[0] = new Vector3 (-68.8f, 6.5f, 0);
+			finPos[1] = new Vector3 (-23.3f, 6.5f, 0);
+			finPos[2] = new Vector3 (23.3f, 6.5f, 0);
+			finPos[3] = new Vector3 (68.8f, 6.5f, 0);
 
 			for (int i=0; i<4; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveFin[i] == 0) {
@@ -265,10 +265,10 @@ public class TouchInputHandler : MonoBehaviour {
 			Vector3[] boostPos;
 			boostPos = new Vector3[4];
 			
-			boostPos[0] = new Vector3 (-50, 0, 0);
-			boostPos[1] = new Vector3 (-30, 0, 0);
-			boostPos[2] = new Vector3 (30, 0, 0);
-			boostPos[3] = new Vector3 (50, 0, 0);
+			boostPos[0] = new Vector3 (-51.8f, -13, 0);
+			boostPos[1] = new Vector3 (-37.7f, -13, 0);
+			boostPos[2] = new Vector3 (37.7f, -13, 0);
+			boostPos[3] = new Vector3 (51.8f, -13, 0);
 			
 			for (int i=0; i<4; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBoost[i] == 0) {
