@@ -32,7 +32,10 @@ public class SavedVariables : MonoBehaviour {
 	public int[] saveBoost;
 	public int[] saveBody;
 
+
 	public List<SavedPieceInfo> previousTrialRocketPieces = new List<SavedPieceInfo> ();
+	public List<SavedPieceInfo> part1pieces = new List<SavedPieceInfo> ();
+	public List<SavedPieceInfo> part2pieces = new List<SavedPieceInfo> ();
 
 	void Awake() {
 		if (Application.loadedLevelName == "Level1") {

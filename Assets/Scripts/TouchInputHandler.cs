@@ -149,8 +149,16 @@ public class TouchInputHandler : MonoBehaviour {
 		questionMark = GameObject.Find ("QuestionArea");
 
 		// sets up the pieces that were there before 
-		var savedVariablesScript = GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ();
-		foreach (SavedPieceInfo savedPiece in savedVariablesScript.previousTrialRocketPieces) {
+		//var savedVariablesScript = GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ();
+
+		List<SavedPieceInfo> savedList; 
+		if (Application.loadedLevelName == "Level1") {
+			savedList = GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().part1pieces;
+		} else {
+			savedList = GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().part2pieces;
+		}
+
+		foreach (SavedPieceInfo savedPiece in savedList) {
 
 			GameObject newObject = null;
 			// 0 - cone, 1 - body, 2 - booster, 3 - fin
@@ -192,11 +200,44 @@ public class TouchInputHandler : MonoBehaviour {
 		levelname = Application.loadedLevelName;
 		GameObject n = null;
 		GameObject n2 = null;
+		Vector3[] finPos;
+		finPos = new Vector3[4];
+		Vector3[] boostPos;
+		boostPos = new Vector3[4];
+		Vector3[] bodyPos;
+		bodyPos = new Vector3[8];
+
 		if (levelname == "Level1-3") {
 
 			//create cones
 			Vector3 conePos = new Vector3 (-46.2f, 23.6f, 0);
 			Vector3 conePos2 = new Vector3 (46.2f, 23.6f, 0);
+			
+			finPos [0] = new Vector3 (-68.8f, 6.5f, 0);
+			finPos [1] = new Vector3 (-23.3f, 6.5f, 0);
+			finPos [2] = new Vector3 (23.3f, 6.5f, 0);
+			finPos [3] = new Vector3 (68.8f, 6.5f, 0);
+
+			boostPos [0] = new Vector3 (-51.8f, -13, 0);
+			boostPos [1] = new Vector3 (-37.7f, -13, 0);
+			boostPos [2] = new Vector3 (37.7f, -13, 0);
+			boostPos [3] = new Vector3 (51.8f, -13, 0);
+
+			bodyPos [0] = new Vector3 (-51.8f, 13, 0);
+			bodyPos [1] = new Vector3 (-37.7f, 13, 0);
+			bodyPos [2] = new Vector3 (37.7f, 13, 0);
+			bodyPos [3] = new Vector3 (51.8f, 13, 0);
+			bodyPos [4] = new Vector3 (-51.8f, 0, 0);
+			bodyPos [5] = new Vector3 (-37.7f, 0, 0);
+			bodyPos [6] = new Vector3 (37.7f, 0, 0);
+			bodyPos [7] = new Vector3 (51.8f, 0, 0);
+		/*} else if (levelname == "Level1") {
+
+		} else if (levelname == "Level1-2") {
+
+		}*/
+
+
 			if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveCone == 0) {
 				n = GameObjectUtil.Instantiate (GameObject.Find ("cone_Double"), conePos);
 				n.GetComponent<SpriteRenderer> ().sprite = GameObject.Find ("cone_Double").GetComponent<ObjectInfo> ().rocketSprite;
@@ -226,13 +267,7 @@ public class TouchInputHandler : MonoBehaviour {
 
 			GameObject[] fins;
 			fins = new GameObject[4];
-			Vector3[] finPos;
-			finPos = new Vector3[4];
 
-			finPos[0] = new Vector3 (-68.8f, 6.5f, 0);
-			finPos[1] = new Vector3 (-23.3f, 6.5f, 0);
-			finPos[2] = new Vector3 (23.3f, 6.5f, 0);
-			finPos[3] = new Vector3 (68.8f, 6.5f, 0);
 
 			for (int i=0; i<4; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveFin[i] == 0) {
@@ -262,13 +297,7 @@ public class TouchInputHandler : MonoBehaviour {
 
 			GameObject[] boosts;
 			boosts = new GameObject[4];
-			Vector3[] boostPos;
-			boostPos = new Vector3[4];
-			
-			boostPos[0] = new Vector3 (-51.8f, -13, 0);
-			boostPos[1] = new Vector3 (-37.7f, -13, 0);
-			boostPos[2] = new Vector3 (37.7f, -13, 0);
-			boostPos[3] = new Vector3 (51.8f, -13, 0);
+
 			
 			for (int i=0; i<4; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBoost[i] == 0) {
@@ -290,17 +319,7 @@ public class TouchInputHandler : MonoBehaviour {
 			
 			GameObject[] bodies;
 			bodies = new GameObject[8];
-			Vector3[] bodyPos;
-			bodyPos = new Vector3[8];
-			
-			bodyPos[0] = new Vector3 (-51.8f, 13, 0);
-			bodyPos[1] = new Vector3 (-37.7f, 13, 0);
-			bodyPos[2] = new Vector3 (37.7f, 13, 0);
-			bodyPos[3] = new Vector3 (51.8f, 13, 0);
-			bodyPos[4] = new Vector3 (-51.8f, 0, 0);
-			bodyPos[5] = new Vector3 (-37.7f, 0, 0);
-			bodyPos[6] = new Vector3 (37.7f, 0, 0);
-			bodyPos[7] = new Vector3 (51.8f, 0, 0);
+
 			
 			for (int i=0; i<8; i++) {
 				if (GameObject.Find ("SavedVariables").GetComponent<SavedVariables> ().saveBody[i] == 0) {
@@ -315,8 +334,9 @@ public class TouchInputHandler : MonoBehaviour {
 				if (bodies[i] != null) {
 					bodies[i].GetComponent<SpriteRenderer>().enabled = true;
 				}
-			}
 
+			//remove when changing earlier commented if/else clause
+			}
 
 		}
 
@@ -1226,7 +1246,7 @@ public class TouchInputHandler : MonoBehaviour {
 		}
 	}*/
 
-	int determinePieceType(string pieceName) {
+	public int determinePieceType(string pieceName) {
 		// 0 - cone, 1 - body, 2 - booster, 3 - fin
 		if (pieceName.Contains ("body_")) {
 			return 1;
@@ -1453,10 +1473,10 @@ public class TouchInputHandler : MonoBehaviour {
 				}
 			}
 		}
-		leftPanelAnimator.SetTrigger ("stateChangeTriggerLeft");
-		leftPanelAnimator.SetTrigger ("stateChangeTriggerTakeoff");
-		rightPanelAnimator.SetTrigger ("stateChangeTriggerRight");
-		rightPanelAnimator.SetTrigger ("stateChangeTriggerTakeoff");
+		//leftPanelAnimator.SetTrigger ("stateChangeTriggerLeft");
+		//leftPanelAnimator.SetTrigger ("stateChangeTriggerTakeoff");
+		//rightPanelAnimator.SetTrigger ("stateChangeTriggerRight");
+		//rightPanelAnimator.SetTrigger ("stateChangeTriggerTakeoff");
 		ending = true;
 
 		// save the pieces and their positions that were in the rocket during this trial
@@ -1467,7 +1487,11 @@ public class TouchInputHandler : MonoBehaviour {
 			                                                  determinePieceType(piece.name), 
 			                                                  piece.GetComponent<ObjectInfo>().pos, 
 			                                                  piece.transform.position);
-			savedVariablesScript.previousTrialRocketPieces.Add (newSavedPiece);
+			if (Application.loadedLevelName == "Level1") {
+				savedVariablesScript.part1pieces.Add (newSavedPiece);
+			} else {
+				savedVariablesScript.part2pieces.Add (newSavedPiece);
+			}
 		}
 	}
 
